@@ -13,8 +13,34 @@ class EditManager {
     
     typealias CompleteHandler = () -> ()
     
-    func audioMix(media: [AVAsset]) {
+    func audioMix(video: AVAsset, audios: [AVAsset], outputURL: URL, handler: CompleteHandler?) {
         
+        let duraion = video.firstVideoTrack.timeRange.duration
+        
+        let composition = AVMutableComposition()
+        
+        let videoTrack = composition.addMutableTrack(withMediaType: .video, preferredTrackID: kCMPersistentTrackID_Invalid)
+        try? videoTrack?.insertTimeRange(CMTimeRange(start: kCMTimeZero, duration: duraion), of: video.firstVideoTrack, at: kCMTimeZero)
+        
+        var inputParams = Array<AVAudioMixInputParameters>()
+        
+        for audio in audios {
+            let audioTrack = composition.addMutableTrack(withMediaType: .audio, preferredTrackID: kCMPersistentTrackID_Invalid)
+            try? audioTrack?.insertTimeRange(CMTimeRange(start: kCMTimeZero, duration: duraion), of: audio.firstAudioTrack, at: kCMTimeZero)
+            let mixInputParameter = AVMutableAudioMixInputParameters(track: audioTrack)
+            inputParams.append(mixInputParameter)
+        }
+        
+        let mutableAudioMix = AVMutableAudioMix()
+        mutableAudioMix.inputParameters = inputParams
+        
+        if let exportSession = AVAssetExportSession(asset: (composition.copy() as! AVAsset), presetName: AVAssetExportPresetHighestQuality) {
+            exportSession.outputURL = outputURL
+            exportSession.outputFileType = .mov
+            exportSession.audioMix = mutableAudioMix
+            
+            self.export(session: exportSession, handler: handler)
+        }
     }
     
     func watermark(video: AVAsset, outputURL: URL, size: CGSize, handler: CompleteHandler?) {

@@ -24,6 +24,12 @@ class ViewController: UIViewController {
         return AVAsset(url: url)
     }()
     
+    let audioEcomoicist: AVAsset = {
+        let path = Bundle.main.path(forResource: "e", ofType: "mp3")
+        let url = URL(fileURLWithPath: path!)
+        return AVAsset(url: url)
+    }()
+    
     let editManager = EditManager()
     
     override func viewDidLoad() {
@@ -36,10 +42,16 @@ class ViewController: UIViewController {
 //            print("finished")
 //        }
         
-        let watermarkVideoPath: String = basePath.appendingPathComponent("water.mov") as String
+//        let watermarkVideoPath: String = basePath.appendingPathComponent("water.mov") as String
+//
+//        editManager.watermark(video: video, outputURL: URL(fileURLWithPath: watermarkVideoPath), size: view.bounds.size) {
+//            print("finished watermark")
+//        }
         
-        editManager.watermark(video: video, outputURL: URL(fileURLWithPath: watermarkVideoPath), size: view.bounds.size) {
-            print("finished watermark")
+        let mixPath: String = basePath.appendingPathComponent("mix.mov") as String
+        
+        editManager.audioMix(video: video, audios: [audio, audioEcomoicist], outputURL: URL(fileURLWithPath: mixPath)) {
+            print("finished mix")
         }
     }
     
