@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A51F41B2021BF3F007EF182 /* e.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A51F41A2021BF3F007EF182 /* e.mp3 */; };
 		2A69B8DF2020493C00E1A897 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A69B8DE2020493C00E1A897 /* AppDelegate.swift */; };
 		2A69B8E12020493C00E1A897 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A69B8E02020493C00E1A897 /* ViewController.swift */; };
 		2A69B8E42020493C00E1A897 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A69B8E22020493C00E1A897 /* Main.storyboard */; };
 		2A69B8E62020493C00E1A897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A69B8E52020493C00E1A897 /* Assets.xcassets */; };
 		2A69B8E92020493C00E1A897 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A69B8E72020493C00E1A897 /* LaunchScreen.storyboard */; };
+		2A69B8F12020509400E1A897 /* un01a.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A69B8F02020509400E1A897 /* un01a.mp3 */; };
+		2A69B8F3202058FA00E1A897 /* sd1517195101_2.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 2A69B8F22020514B00E1A897 /* sd1517195101_2.MP4 */; };
+		2A69B8F5202074F500E1A897 /* EditManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A69B8F4202074F500E1A897 /* EditManager.swift */; };
+		2A69B8F72020766900E1A897 /* AVAset+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A69B8F62020766900E1A897 /* AVAset+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A51F41A2021BF3F007EF182 /* e.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = e.mp3; sourceTree = "<group>"; };
 		2A69B8DB2020493C00E1A897 /* MediaEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A69B8DE2020493C00E1A897 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A69B8E02020493C00E1A897 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +28,10 @@
 		2A69B8E52020493C00E1A897 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A69B8E82020493C00E1A897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A69B8EA2020493C00E1A897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A69B8F02020509400E1A897 /* un01a.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = un01a.mp3; sourceTree = "<group>"; };
+		2A69B8F22020514B00E1A897 /* sd1517195101_2.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sd1517195101_2.MP4; sourceTree = "<group>"; };
+		2A69B8F4202074F500E1A897 /* EditManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditManager.swift; sourceTree = "<group>"; };
+		2A69B8F62020766900E1A897 /* AVAset+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVAset+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +64,17 @@
 		2A69B8DD2020493C00E1A897 /* MediaEditor */ = {
 			isa = PBXGroup;
 			children = (
+				2A51F41A2021BF3F007EF182 /* e.mp3 */,
+				2A69B8F22020514B00E1A897 /* sd1517195101_2.MP4 */,
+				2A69B8F02020509400E1A897 /* un01a.mp3 */,
 				2A69B8DE2020493C00E1A897 /* AppDelegate.swift */,
 				2A69B8E02020493C00E1A897 /* ViewController.swift */,
 				2A69B8E22020493C00E1A897 /* Main.storyboard */,
 				2A69B8E52020493C00E1A897 /* Assets.xcassets */,
 				2A69B8E72020493C00E1A897 /* LaunchScreen.storyboard */,
 				2A69B8EA2020493C00E1A897 /* Info.plist */,
+				2A69B8F4202074F500E1A897 /* EditManager.swift */,
+				2A69B8F62020766900E1A897 /* AVAset+Extension.swift */,
 			);
 			path = MediaEditor;
 			sourceTree = "<group>";
@@ -123,9 +138,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A69B8F12020509400E1A897 /* un01a.mp3 in Resources */,
 				2A69B8E92020493C00E1A897 /* LaunchScreen.storyboard in Resources */,
 				2A69B8E62020493C00E1A897 /* Assets.xcassets in Resources */,
 				2A69B8E42020493C00E1A897 /* Main.storyboard in Resources */,
+				2A69B8F3202058FA00E1A897 /* sd1517195101_2.MP4 in Resources */,
+				2A51F41B2021BF3F007EF182 /* e.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +154,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A69B8F5202074F500E1A897 /* EditManager.swift in Sources */,
+				2A69B8F72020766900E1A897 /* AVAset+Extension.swift in Sources */,
 				2A69B8E12020493C00E1A897 /* ViewController.swift in Sources */,
 				2A69B8DF2020493C00E1A897 /* AppDelegate.swift in Sources */,
 			);
@@ -275,7 +295,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C8PPXH77PQ;
 				INFOPLIST_FILE = MediaEditor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sina.MediaEditor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -289,7 +311,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C8PPXH77PQ;
 				INFOPLIST_FILE = MediaEditor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sina.MediaEditor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
